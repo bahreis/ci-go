@@ -1,0 +1,18 @@
+name: ci-golang-workflow
+on: [push]
+jobs:
+  check-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 #pega os dados que foi atualizado, e atualiza na maquina ubunt
+      - uses: actions/setup-go@v2 #prepara o ambiente para executar a linhagem GO
+        with: 
+          go-version: 1.15
+      - run: go test
+      - run: go run math.go
+
+
+# https://github.com/actions/checkout
+# https://github.com/actions/setup-go
+
+
