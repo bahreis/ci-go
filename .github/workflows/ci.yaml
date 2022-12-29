@@ -17,6 +17,5 @@ jobs:
           go-version: ${{ matrix.go }}
       - run: go test
       - run: go run math.go
-      
 # https://github.com/actions/checkout
 # https://github.com/actions/setup-go
